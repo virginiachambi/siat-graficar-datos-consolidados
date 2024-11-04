@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Ventas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Análisis de Ventas</h1>
+            <p>Sube tu archivo de ventas consolidados que tienes en el SIAT para gráficarlo.</p>
+        </header>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".xlsx" required>
+            <button type="submit">Subir</button>
+        </form>
+
+        {% if data %}
+        <section class="data-section">
+            <h2>Datos Cargados</h2>
+            <div class="data-table">{{ data|safe }}</div>
+        </section>
+        {% endif %}
+
+        {% if summary %}
+        <section class="summary-section">
+            <h2>Resumen de Ventas</h2>
+            <div class="summary-table">{{ summary|safe }}</div>
+        </section>
+        {% endif %}
+
+
+        {% if line_graph_url %}
+        <section class="graph-section">
+            <h2>Gráfico de Ventas por Día</h2>
+            <img src="data:image/png;base64,{{ line_graph_url }}" alt="Gráfico de Ventas">
+        </section>
+        {% endif %}
+
+        {% if regression_graph_url %}
+        <section class="graph-section">
+            <h2>Gráfico de Regresión Lineal</h2>
+            <img src="data:image/png;base64,{{ regression_graph_url }}" alt="Gráfico de Regresión">
+        </section>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f5f7; /* Fondo suave y claro */
+    color: #4a4a4a; /* Color de texto gris oscuro */
+}
+
+h1, h2 {
+    color: #B05280; /* Color suave para títulos */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #FFFFFF; /* Blanco */
+    background-color: #B05280; /* Color suave */
+    padding: 10px; /* Añadir espacio */
+    border-radius: 5px; /* Bordes redondeados */
+    max-width: 80%; /* Limitar el ancho al 80% */
+    margin: auto; /* Centrar el elemento */
+}
+
+
+form {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #FEE2E5; /* Rosa pálido */
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #D19BB0; /* Color rosa suave */
+    border-radius: 4px;
+    width: calc(100% - 24px);
+}
+
+button {
+    background-color: #D19BB0; /* Color rosa suave */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #A45D79; /* Color más oscuro al pasar el mouse */
+}
+
+.data-table, .summary-table {
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #D19BB0; /* Color rosa suave */
+    border-radius: 8px;
+    background-color: #ffffff; /* Fondo blanco para las tablas */
+    width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-table table, .summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .summary-table th,
+.data-table td, .summary-table td {
+    border: 1px solid #FFB6C1; /* Rosa suave para los bordes de la tabla */
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th, .summary-table th {
+    background-color: #FFB6C1; /* Rosa suave para encabezados */
+    color: white;
+}
+
+.data-table tr:nth-child(even), .summary-table tr:nth-child(even) {
+    background-color: #F7E9ED; /* Color de fondo rosa claro para filas pares */
+}
+
+.summary-table {
+    margin-top: 20px;
+}
+
+.summary-table th {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.summary-table td {
+    color: #5D4C5E; /* Color gris para los datos */
+    font-size: 14px;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 80%; 
+    max-width: 100%;
+    height: auto;
+}
