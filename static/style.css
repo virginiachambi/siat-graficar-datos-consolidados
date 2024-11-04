@@ -30,7 +30,7 @@ form {
 }
 
 input[type="file"] {
-    padding: 10px;
+    padding: 20px;
     border: 2px solid #D19BB0; /* Color rosa suave */
     border-radius: 4px;
     width: calc(100% - 24px);
